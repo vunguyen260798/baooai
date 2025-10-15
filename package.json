@@ -1,7 +1,7 @@
 {
   "name": "coming-soon-2026-ai",
   "version": "1.0.0",
-  "description": "An exciting AI project launching soon in 2026",
+  "description": "Baoo AI delivers intelligent solutions powered by advanced machine learning, automation, and data-driven insights to help businesses innovate, optimize, and scale smarter.",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
