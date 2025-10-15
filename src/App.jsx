@@ -219,6 +219,13 @@ const App = () => {
           transition={{ delay: 1.2, duration: 0.8 }}
         >
           {/* Social icons placeholder */}
+          
+          {/* DMCA Badge */}
+          <div className="mt-4 flex justify-center">
+            <a href="https://www.dmca.com/Protection/Status.aspx?ID=adafb0d7-d4eb-434d-9d73-06ac75f6899b&refurl=https://baootech.com/" title="DMCA.com Protection Status" className="dmca-badge" >
+              <img src="https://images.dmca.com/Badges/dmca-badge-w250-2x1-02.png?ID=fcc56105-e797-4bc4-a2a8-b49eaf67f69d" alt="DMCA.com Protection Status" className="h-12 w-auto" />
+            </a>
+          </div>
      
           {/* Copyright */}
           <p className="text-sm text-gray-500">
