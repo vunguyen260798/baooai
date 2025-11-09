@@ -1,8 +1,63 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 const App = () => {
   const shouldReduceMotion = useReducedMotion();
+
+  // Load Reamaze chat widget
+  useEffect(() => {
+    // Configure Reamaze
+    window._support = window._support || { ui: {}, user: {} };
+    window._support.account = '5c63d00e-b1b2-11f0-86c5-7cd30aca5dc4';
+    window._support.ui.contactMode = 'mixed';
+    window._support.ui.enableKb = 'true';
+    window._support.ui.mailbox = '67249682';
+    window._support.ui.styles = {
+      widgetColor: 'rgb(254, 234, 216)',
+      gradient: true
+    };
+    window._support.ui.shoutboxFacesMode = '';
+    window._support.ui.widget = {
+      allowBotProcessing: 'true',
+      slug: 'baoo-technologies-inc',
+      label: {
+        text: 'Welcome to Baoo Technologies, Inc.! 👋\nWe specialize in AI innovation, software development, and digital transformation.\nHow can we help you today?',
+        mode: 'notification',
+        delay: 3,
+        duration: 30,
+        primary: '💡 What services do you offer?',
+        primary2: '🤖 Can you tell me more about your AI services?',
+        primary3: '🌐 Do you build websites and mobile apps?',
+        primary4: '🎮 What kind of games do you develop?',
+        primary5: '🔗 How can blockchain help my business?',
+        secondary: '',
+        sound: true
+      },
+      position: 'bottom-right'
+    };
+    window._support.ui.overrides = window._support.ui.overrides || {};
+    window._support.ui.overrides.confirmationMessage = 'Thank you for reaching out! 😊 We have received your message and will get back to you as soon as possible.';
+    window._support.apps = {
+      recentConversations: {},
+      faq: { enabled: true }
+    };
+
+    // Load Reamaze script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://cdn.reamaze.com/assets/reamaze-loader.js';
+    document.getElementsByTagName('head')[0].appendChild(script);
+
+    // Cleanup function
+    return () => {
+      // Remove script on component unmount
+      const existingScript = document.querySelector('script[src="https://cdn.reamaze.com/assets/reamaze-loader.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   // Motion variants for floating elements
   const floatingVariants = {
