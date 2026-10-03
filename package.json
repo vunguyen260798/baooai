@@ -1,5 +1,5 @@
 {
-  "name": "coming-soon-2026-ai",
+  "name": "coming-soon-2028-ai",
   "version": "1.0.0",
   "description": "Baoo AI delivers intelligent solutions powered by advanced machine learning, automation, and data-driven insights to help businesses innovate, optimize, and scale smarter.",
   "main": "index.js",
@@ -14,12 +14,12 @@
     "framer-motion": "^10.16.16"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.16",
+    "@vitejs/plugin-react": "^6.1.1",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "vite": "^5.0.8"
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.2"
   }
 }

@@ -237,7 +237,7 @@ const App = () => {
             role="heading"
             aria-level="1"
           >
-            Coming Soon 2026
+            Coming Soon 2028
           </motion.h1>
 
           {/* Tagline */}
@@ -284,7 +284,7 @@ const App = () => {
      
           {/* Copyright */}
           <p className="text-sm text-gray-500">
-            © 2025 AI Project. All rights reserved.
+            © 2026 AI Project. All rights reserved.
           </p>
         </motion.div>
       </footer>
